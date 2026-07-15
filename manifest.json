@@ -1,0 +1,33 @@
+{
+  "name": "Ethio-Majlis",
+  "short_name": "Ethio-Majlis",
+  "description": "Islamic app for the Ethiopian Muslim community — Quran, Dua, Prayer Times, Qibla, Tasbih and more.",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0B7A3E",
+  "theme_color": "#0B7A3E",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "lifestyle", "books"],
+  "icons": [
+    { "src": "/public/icons/icon-72.png", "sizes": "72x72", "type": "image/png" },
+    { "src": "/public/icons/icon-96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "/public/icons/icon-128.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "/public/icons/icon-144.png", "sizes": "144x144", "type": "image/png" },
+    { "src": "/public/icons/icon-152.png", "sizes": "152x152", "type": "image/png" },
+    { "src": "/public/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/public/icons/icon-384.png", "sizes": "384x384", "type": "image/png" },
+    { "src": "/public/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/public/icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/public/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Prayer Times", "url": "/?view=prayer", "icons": [{ "src": "/public/icons/icon-96.png", "sizes": "96x96" }] },
+    { "name": "Quran", "url": "/?view=quran", "icons": [{ "src": "/public/icons/icon-96.png", "sizes": "96x96" }] },
+    { "name": "Qibla", "url": "/?view=qibla", "icons": [{ "src": "/public/icons/icon-96.png", "sizes": "96x96" }] },
+    { "name": "Tasbih", "url": "/?view=tasbih", "icons": [{ "src": "/public/icons/icon-96.png", "sizes": "96x96" }] }
+  ]
+}

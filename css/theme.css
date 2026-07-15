@@ -1,0 +1,106 @@
+/* ===================================================================
+   Ethio-Majlis — Design System / Theme
+   Primary Green #0B7A3E · Gold #D4AF37 · White background
+   =================================================================== */
+
+:root {
+  /* Brand */
+  --green: #0B7A3E;
+  --green-600: #0a6e38;
+  --green-700: #085a2e;
+  --green-050: #e8f5ee;
+  --gold: #D4AF37;
+  --gold-600: #b8952c;
+  --gold-050: #fbf6e6;
+
+  /* Semantic (light) */
+  --bg: #f6f8f7;
+  --bg-solid: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f2f5f3;
+  --card: #ffffff;
+  --text: #16211b;
+  --text-2: #5b6b62;
+  --muted: #8a978f;
+  --border: #e6ebe8;
+  --shadow-color: 20 40 30;
+  --primary: var(--green);
+  --primary-contrast: #ffffff;
+  --accent: var(--gold);
+  --danger: #d64545;
+  --success: #2f9e56;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.55);
+
+  /* Shape & motion */
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-lg: 28px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 3px rgba(var(--shadow-color) / 0.08), 0 1px 2px rgba(var(--shadow-color) / 0.06);
+  --shadow: 0 8px 24px rgba(var(--shadow-color) / 0.10), 0 2px 6px rgba(var(--shadow-color) / 0.06);
+  --shadow-lg: 0 18px 48px rgba(var(--shadow-color) / 0.16), 0 6px 16px rgba(var(--shadow-color) / 0.08);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font-sans: "Inter", "Noto Sans Ethiopic", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-ar: "Amiri", "Scheherazade New", "Noto Naskh Arabic", serif;
+  --nav-h: 68px;
+  --header-h: 60px;
+  --maxw: 720px;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0c110e;
+  --bg-solid: #10161200;
+  --surface: #151d18;
+  --surface-2: #1b241e;
+  --card: #151d18;
+  --text: #eaf1ec;
+  --text-2: #a8b7ae;
+  --muted: #7c8a81;
+  --border: #26312a;
+  --shadow-color: 0 0 0;
+  --glass-bg: rgba(21, 29, 24, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --green-050: #12251a;
+  --gold-050: #26210f;
+}
+
+/* Accent theme variants (Settings > Theme) */
+:root[data-accent="ocean"]  { --primary:#0B6E7A; --green:#0B6E7A; --green-050:#e6f3f5; }
+:root[data-accent="royal"]  { --primary:#1F3C88; --green:#1F3C88; --green-050:#e9edf7; }
+:root[data-accent="rose"]   { --primary:#9E2A4E; --green:#9E2A4E; --green-050:#f7e9ee; }
+:root[data-accent="emerald"]{ --primary:#0B7A3E; --green:#0B7A3E; --green-050:#e8f5ee; }
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; padding: 0; }
+
+html {
+  background: var(--green);
+  color-scheme: light dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+  min-height: 100dvh;
+}
+
+h1, h2, h3, h4 { line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
+
+.arabic { font-family: var(--font-ar); direction: rtl; line-height: 2.1; }
