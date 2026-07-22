@@ -4,6 +4,7 @@ import { applyDir } from './i18n.js';
 import { register, initRouter, go } from './router.js';
 import { onAuth, initFirebase, loadUserData, logEvent } from './firebase.js';
 import { store } from './store.js';
+import { injectSpeedInsights } from './vendor/speed-insights.mjs';
 
 // Views
 import { HomeView } from './views/home.js';
@@ -70,6 +71,11 @@ if ('serviceWorker' in navigator) {
 async function boot() {
   applyTheme();
   applyDir();
+
+  // Initialize Vercel Speed Insights
+  injectSpeedInsights({
+    framework: 'vanilla-js'
+  });
 
   // Handle deep-link shortcuts (?view=quran)
   const q = new URLSearchParams(location.search);
