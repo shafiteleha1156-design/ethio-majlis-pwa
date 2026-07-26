@@ -1,4 +1,5 @@
 // Ethio-Majlis — application bootstrap.
+import { inject } from '@vercel/speed-insights';
 import { $, applyTheme, toast } from './utils.js';
 import { applyDir } from './i18n.js';
 import { register, initRouter, go } from './router.js';
@@ -70,6 +71,9 @@ if ('serviceWorker' in navigator) {
 async function boot() {
   applyTheme();
   applyDir();
+
+  // Initialize Speed Insights
+  inject();
 
   // Handle deep-link shortcuts (?view=quran)
   const q = new URLSearchParams(location.search);
