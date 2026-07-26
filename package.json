@@ -7,6 +7,7 @@
     "start": "serve . -l 3000 --no-clipboard"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "serve": "^14.2.4"
   },
   "devDependencies": {
